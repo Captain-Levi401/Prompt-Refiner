@@ -1,0 +1,28 @@
+# Python environment
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Streamlit settings
+.streamlit/
+
+# Model artifacts and large weights
+*.safetensors
+*.ckpt
+*.bin
+*.pt
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+*.log
+*.cache/
+.env
+.env.*
