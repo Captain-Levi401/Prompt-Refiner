@@ -47,14 +47,18 @@ This project combines **prompt classification** and **prompt refinement** into a
 
 ```mermaid
 graph TD
-    UI[User Browser / Streamlit UI] --> App[Streamlit app (`app.py`)]
-    App --> Scorer[DistilBERT Prompt Quality Scorer]
-    App --> Refiner[T5 Prompt Refiner]
-    Scorer --> ModelA[DistilBERT weights (`./model`)]
-    Refiner --> ModelB[T5 weights (`./final_prompt_refiner`)]
-    App --> Device[Compute Device: CPU / GPU (CUDA)]
-    App --> Output[Result Display & Copyable Output]
-    subgraph Model Storage
+    UI["User Browser / Streamlit UI"] --> App["Streamlit app (app.py)"]
+
+    App --> Scorer["DistilBERT Prompt Quality Scorer"]
+    App --> Refiner["T5 Prompt Refiner"]
+
+    Scorer --> ModelA["DistilBERT weights (./model)"]
+    Refiner --> ModelB["T5 weights (./final_prompt_refiner)"]
+
+    App --> Device["Compute Device: CPU / GPU (CUDA)"]
+    App --> Output["Result Display & Copyable Output"]
+
+    subgraph "Model Storage"
         ModelA
         ModelB
     end
